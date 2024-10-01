@@ -105,6 +105,8 @@ class Eventbrite(AccessMethodsMixin):
     def get_organization_venues(self, id, **data):
         return self.get("/organizations/{0}/venues".format(id), data=data)
 
+    def get_venue(self, id, **data):
+        return self.get("/venues/{0}/".format(id), data=data)
 
     def get_user(self, user_id=None):
         """
